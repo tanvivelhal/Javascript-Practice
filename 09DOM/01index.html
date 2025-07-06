@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <div id="new" class="parent">
+        <div class="days">mon</div>
+        <div class="days">tues</div>
+        <div class="days">wed</div>
+        <div class="days">thurs</div>
+    </div>
+</body>
+
+<script>
+   const newDiv = document.createElement("h1")
+   newDiv.className = "days"
+   newDiv.innerHTML = "friday"
+
+   document.getElementById("new").appendChild(newDiv)
+    
+</script>
+</html>
