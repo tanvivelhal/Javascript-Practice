@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div></div>
+</body>
+
+<script>
+
+    document.body.addEventListener('keydown', (e) => {
+        let keyDown = `
+    <table>
+  <tr>
+    <td>key</td>
+    <td>code</td>
+    <td>keycode</td>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.code}</td>
+    <td>${e.keyCode}</td>
+  </tr>
+</table>
+    `
+document.querySelector("div").innerHTML = keyDown })
+
+</script>
+
+</html>
