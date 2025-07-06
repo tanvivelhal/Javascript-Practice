@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <img id="image1" style="height: 150px;  width: 150px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s" alt="">
+        <img id="image2" style="height: 150px;  width: 150px;" src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="">
+        <img id="image3" style="height: 150px;  width: 150px;" src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+    </div>
+<a id="google" href="https://www.google.com/">google</a>
+</body>
+
+<script>
+    document.getElementById('image1').addEventListener('mouseleave',()=>{
+        alert("clicked on image 1")
+    })
+    document.querySelector(".parent").addEventListener('click', function (e) { 
+        console.log('clicked on parent div')
+     },false)
+
+    document.querySelector('#image2').addEventListener('click', function(e){
+         e.stopPropagation()     //to stop prevent bubbling
+        console.log("clicked on image 2")
+    }, false)
+
+    document.getElementById("google").addEventListener('click', function (e) { 
+        e.preventDefault()
+     })
+     
+     //latest code
+    const image = document.querySelector(".parent").addEventListener('click', (e)=>{
+        let removeIt = e.target
+        removeIt.remove()
+    })
+    console.log(image)
+</script>
+</html>
